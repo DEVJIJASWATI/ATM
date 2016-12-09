@@ -11,8 +11,6 @@ public class Scene4 {
 
     //Set scene 4
     protected static Scene setScene4(Stage window, User user){
-        //Reset attempts since card is being retained
-        user.setAttempts(0);
         //Set up scene4
         VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);
@@ -24,7 +22,7 @@ public class Scene4 {
         description.setId("med-label");
         //Button that directs to scene 4
         Button button = new Button("Exit");
-        button.setOnAction(e -> window.setScene(Scene1.getScene1()));
+        button.setOnAction(e -> window.setScene(Scene1.setScene1(window, user)));
         //Set width
         button.setMinWidth(100);
         button.getStyleClass().add("button-red");

@@ -8,15 +8,18 @@ public class Main extends Application{
     //Height & width of window for project
     protected static final int WIDTH = 500;
     protected static final int HEIGHT = 400;
+    //Create user
+    User user = new User(100, "1234"); //PIN = 1234
 
     //Start Application
     @Override
     public void start(Stage window) throws Exception{
+        System.out.println("Pin is 1234");
         //Set title for window
         window.setTitle("Rock Solid Credit Union");
         window.setResizable(false);
         //Load First Scene
-        window.setScene(Scene1.setScene1(window));
+        window.setScene(Scene1.setScene1(window, user));
         window.show();
     }
 }

@@ -141,7 +141,7 @@ public class Scene2{
         //If a valid length pin has been entered
         if(pinNumber.length() >= 4) {
             //Get hashed pin
-            String hashedPin = hashPin();
+            String hashedPin = hashEnteredPin(pinNumber, user);
             //If correct pin go to account or lock out screen or invalid pin stage
             if (hashedPin.equals(user.getPin())) {
                 user.setAttempts(0);
@@ -157,15 +157,7 @@ public class Scene2{
         }
     }
 
-    //Create hash of entered pin
-    private static String hashPin(){
-        try {
-            byte[] bytesOfMessage = pinNumber.getBytes("UTF-8");
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] thedigest = md.digest(bytesOfMessage);
-            return new String(thedigest, StandardCharsets.UTF_8);
-        }catch (Exception e){
-            return null;
-        }
+    public static String hashEnteredPin(String pinNumber, User user){
+        return user.hashPin(pinNumber);
     }
 }

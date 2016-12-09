@@ -10,9 +10,7 @@ public class Scene1{
     protected static Scene scene1;
 
     //Set scene 1
-    protected static Scene setScene1(Stage window){
-        //Getting user from atm card
-        User user = new User(100, "�ܛ�R�M�\u00006��1>�U"); //PIN = 1234
+    protected static Scene setScene1(Stage window, User user){
         //Set up scene1
         VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);

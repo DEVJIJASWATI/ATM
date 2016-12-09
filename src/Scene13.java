@@ -45,11 +45,17 @@ public class Scene13 {
     public static void addToBalance(Stage window, User user){
         try {
             Random r = new Random();
-            user.setBalance(user.getBalance() + ((r.nextInt(9) + 1) * 10));
+            user.setBalance(createDepositAmount(user));
             window.setScene(Scene14.setScene14(window));
         } catch (Exception e){
             window.setScene(Scene12.setScene12(window));
         }
+    }
+
+    //Create random depost amount
+    public static double createDepositAmount(User user){
+        Random r = new Random();
+        return (user.getBalance() + (r.nextInt(9) + 1) * 10);
     }
 
     //Get Scene 13 if it has already been set

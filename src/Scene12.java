@@ -40,5 +40,5 @@ public class Scene12 {
     }
 
     //Get Scene 8 if it has already been set
-    protected static Scene getScene12(){return scene12;}
+    //protected static Scene getScene12(){return scene12;}
 }

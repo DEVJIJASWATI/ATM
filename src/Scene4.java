@@ -36,5 +36,5 @@ public class Scene4 {
     }
 
     //Get Scene 4 if it has already been set
-    protected static Scene getScene4(){return scene4;}
+    //protected static Scene getScene4(){return scene4;}
 }

@@ -44,7 +44,7 @@ public class Scene13 {
     //Increase balance
     public static void addToBalance(Stage window, User user){
         try {
-            Random r = new Random();
+            //Random r = new Random();
             user.setBalance(createDepositAmount(user));
             window.setScene(Scene14.setScene14(window));
         } catch (Exception e){
@@ -59,5 +59,5 @@ public class Scene13 {
     }
 
     //Get Scene 13 if it has already been set
-    protected static Scene getScene13(){return scene13;}
+    //protected static Scene getScene13(){return scene13;}
 }
